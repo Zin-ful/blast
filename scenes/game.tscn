@@ -1,3 +1,134 @@
-[gd_scene format=3 uid="uid://b0y1x1un4c1f7"]
+[gd_scene load_steps=17 format=3 uid="uid://c150fj8k0yrjv"]
 
-[node name="Game" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_5f8xh"]
+[ext_resource type="Texture2D" uid="uid://dub2yihv0td1n" path="res://Sprites/Ship Original States.png" id="2_kwgeg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qip2x"]
+radius = 9.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyi0c"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wrk8"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qlft"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qxt8"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gc8d"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk85v"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gggt2"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipl55"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np6j8"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v4d1"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3baaa"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqa1t"]
+atlas = ExtResource("2_kwgeg")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_euiho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyi0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wrk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qlft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qxt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gc8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk85v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gggt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipl55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np6j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v4d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3baaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqa1t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="game" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+scale = Vector2(-1, -1)
+polygon = PackedVector2Array(384, -216, -384, -216, -387, -266, 388, -256, 482, -257, 459, 269, -431, 261, -420, -277, -384, -216, -383, 216, 384, 216)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -469.0
+offset_top = -301.0
+offset_right = 481.0
+offset_bottom = 275.0
+texture = ExtResource("2_kwgeg")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(0, -1)
+script = ExtResource("1_5f8xh")
+
+[node name="Ship_Collision_Original" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_qip2x")
+debug_color = Color(0.986348, 0, 0.324526, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 1)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="ship_animation_original" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_euiho")
+autoplay = "default"
