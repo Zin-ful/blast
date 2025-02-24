@@ -1,11 +1,12 @@
-AnimatedSprite2D
+TextureRect
+TileMap
 Sprite2D
-AnimationPlayer
 AnimationTree
+AnimationPlayer
+AnimatedSprite2D
 CollisionPolygon2D
 StaticBody2D
 Polygon2D
-TextureRect
 CollisionShape2D
 Camera2D
 CharacterBody2D
