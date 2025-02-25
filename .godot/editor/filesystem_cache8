@@ -1,14 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740452022
+::res://::1740513462
 icon.svg::CompressedTexture2D::4585236916914090569::1740251492::1740251511::1::::<><>::
-::res://Scenes/::1740444009
+::res://Scenes/::1740518329
 character_body_2d.gd::GDScript::-1::1740258427::0::1::::<>CharacterBody2D<>::
 game2.gd::GDScript::-1::1740430066::0::1::::<>Node2D<>::
 game.gd::GDScript::-1::1740441349::0::1::::<>Node2D<>::
-game.tscn::PackedScene::6661210012562946395::1740444009::0::1::::<><>::res://Scenes/player.gd<>uid://d0aa8h2tl0t4j::::res://Sprites/Enviorments/test stars 3.png<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png<>res://Scenes/tile_map.gd
-player.gd::GDScript::-1::1740443919::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::4623487302812495290::1740443946::0::1::::<><>::res://Scenes/player.gd<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png
-tile_map.gd::GDScript::-1::1740443946::0::1::::<>TileMap<>::
+game.tscn::PackedScene::6661210012562946395::1740518329::0::1::::<><>::res://Scenes/player.gd<>uid://d0aa8h2tl0t4j::::res://Sprites/Enviorments/test stars 3.png<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png<>res://Scenes/tile_map.gd<>res://Scenes/camera_2d.gd
+player.gd::GDScript::-1::1740455641::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4623487302812495290::1740518329::0::1::::<><>::res://Scenes/player.gd<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png
+camera_2d.gd::GDScript::-1::1740515379::0::1::::<>Camera2D<>::
+tile_map.gd::GDScript::-1::1740518329::0::1::::<>TileMap<>::
 ::res://Sprites/::1740438701
 Ship Original States.png::CompressedTexture2D::8566785951441158165::1740352890::1740352893::1::::<><>::
 ::res://Sprites/Enviorments/::1740443077
