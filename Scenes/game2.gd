@@ -10,7 +10,7 @@ var noise: Noise
 var player_pos
 var player_pos_cache
 
-var radius : int = 50
+var radius : int = 100
 
 var noise_array = []
 

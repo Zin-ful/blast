@@ -1,56 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://c150fj8k0yrjv"]
+[gd_scene load_steps=15 format=3 uid="uid://b64wfpnqb6803"]
 
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_5f8xh"]
-[ext_resource type="Texture2D" uid="uid://d0aa8h2tl0t4j" path="res://Sprites/Enviorments/test stars 3.png" id="1_larav"]
-[ext_resource type="Texture2D" uid="uid://dub2yihv0td1n" path="res://Sprites/Ship Original States.png" id="2_kwgeg"]
-[ext_resource type="Script" path="res://Scenes/tile_map.gd" id="3_kcw8c"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_v15go"]
+[ext_resource type="Texture2D" uid="uid://dub2yihv0td1n" path="res://Sprites/Ship Original States.png" id="2_h1jto"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uhbr6"]
-texture = ExtResource("1_larav")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_sy65y"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "space_main 0"
-terrain_set_0/terrain_0/color = Color(0.773475, 0.751712, 0.714536, 1)
-terrain_set_1/mode = 0
-terrain_set_1/terrain_0/name = "space_main_star 1"
-terrain_set_1/terrain_0/color = Color(0.739986, 0.705168, 0.681863, 1)
-sources/0 = SubResource("TileSetAtlasSource_uhbr6")
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8f7qc"]
-radius = 25.318
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mnsw5"]
-particle_flag_disable_z = true
-emission_shape_offset = Vector3(-100, 0, 0)
-emission_shape_scale = Vector3(10, 1000, 1)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-spread = 3.214
-initial_velocity_min = -5.0
-initial_velocity_max = -5.0
-gravity = Vector3(0, 0, 0)
-scale_min = 4.0
-scale_max = 4.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_1gu7m"]
+radius = 44.0114
 
 [sub_resource type="Animation" id="Animation_rlr1x"]
 length = 0.001
@@ -533,59 +487,37 @@ _data = {
 "turn_up": SubResource("Animation_q34qq")
 }
 
-[node name="game" type="Node2D"]
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_sy65y")
-format = 2
-layer_0/name = "space_main 0"
-layer_1/name = "space_main_star 1"
-script = ExtResource("3_kcw8c")
-
-[node name="Timer" type="Timer" parent="TileMap"]
-wait_time = 0.02
-autostart = true
-
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(0, -1)
-script = ExtResource("1_5f8xh")
+script = ExtResource("1_v15go")
 
-[node name="Ship_Collision_Original" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, 1)
-shape = SubResource("CircleShape2D_8f7qc")
-debug_color = Color(0.986348, 0, 0.324526, 0.42)
-
-[node name="star field back" type="GPUParticles2D" parent="Player"]
-position = Vector2(1050, 41)
-amount = 1000
-process_material = SubResource("ParticleProcessMaterial_mnsw5")
-lifetime = 285.83
-preprocess = 255.73
-speed_scale = 2.58
-trail_lifetime = 1.65
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(0, -2)
-position_smoothing_enabled = true
+[node name="Camera2D2" type="Camera2D" parent="."]
+zoom = Vector2(0.1, 0.1)
 position_smoothing_speed = 15.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+[node name="Ship_Collision_Original2" type="CollisionShape2D" parent="."]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_1gu7m")
+debug_color = Color(0.986348, 0, 0.324526, 0.42)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
 libraries = {
 "": SubResource("AnimationLibrary_qnybw")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="Player"]
+[node name="AnimationTree2" type="AnimationTree" parent="."]
+root_node = NodePath("")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(0, 2)
-scale = Vector2(1.116, 1.12)
-texture = ExtResource("2_kwgeg")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.876, 2)
+texture = ExtResource("2_h1jto")
 offset = Vector2(-0.485, 0)
 hframes = 3
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Player"]
-position = Vector2(0, 1)
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 scale = Vector2(-1, -1)
 polygon = PackedVector2Array(384, -216, -384, -216, -387, -266, 388, -256, 482, -257, 459, 269, -431, 261, -420, -277, -384, -216, -383, 216, 384, 216)

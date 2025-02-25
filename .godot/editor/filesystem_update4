@@ -1,3 +1,4 @@
 res://Scenes/game.tscn
+res://Scenes/tile_map.gd
+res://Scenes/player.tscn
 res://Scenes/player.gd
-res://Scenes/game.gd

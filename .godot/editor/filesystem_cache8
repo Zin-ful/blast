@@ -1,15 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740343600
+::res://::1740452022
 icon.svg::CompressedTexture2D::4585236916914090569::1740251492::1740251511::1::::<><>::
-::res://Scenes/::1740352817
+::res://Scenes/::1740444009
 character_body_2d.gd::GDScript::-1::1740258427::0::1::::<>CharacterBody2D<>::
-game.gd::GDScript::-1::1740352444::0::1::::<>Node2D<>::
-game.tscn::PackedScene::6661210012562946395::1740352817::0::1::::<><>::res://Scenes/player.gd<>res://Scenes/game.gd<>uid://u4nxiaaptp3m::::res://Sprites/Enviorments/Space Main 64bit.png<>uid://07kamjj7i33q::::res://Sprites/Ship_original.png
-player.gd::GDScript::-1::1740347329::0::1::::<>CharacterBody2D<>::
-::res://Sprites/::1740352623
+game2.gd::GDScript::-1::1740430066::0::1::::<>Node2D<>::
+game.gd::GDScript::-1::1740441349::0::1::::<>Node2D<>::
+game.tscn::PackedScene::6661210012562946395::1740444009::0::1::::<><>::res://Scenes/player.gd<>uid://d0aa8h2tl0t4j::::res://Sprites/Enviorments/test stars 3.png<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png<>res://Scenes/tile_map.gd
+player.gd::GDScript::-1::1740443919::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::4623487302812495290::1740443946::0::1::::<><>::res://Scenes/player.gd<>uid://dub2yihv0td1n::::res://Sprites/Ship Original States.png
+tile_map.gd::GDScript::-1::1740443946::0::1::::<>TileMap<>::
+::res://Sprites/::1740438701
 Ship Original States.png::CompressedTexture2D::8566785951441158165::1740352890::1740352893::1::::<><>::
-ship.PNG::CompressedTexture2D::8864460136783154093::1740341146::1740341360::1::::<><>::
-Ship_original.png::CompressedTexture2D::1821388993643857880::1740352620::1740352623::1::::<><>::
-::res://Sprites/Enviorments/::1740343600
+::res://Sprites/Enviorments/::1740443077
+generate test.png::CompressedTexture2D::5219210209918974077::1740438214::1740438296::1::::<><>::
 Space Main 32bit.png::CompressedTexture2D::8630936218132912441::1740341760::1740343600::1::::<><>::
 Space Main 64bit.png::CompressedTexture2D::1464474642001769096::1740343588::1740343590::1::::<><>::
+test stars 2.png::CompressedTexture2D::6781738143228460745::1740438770::1740438806::1::::<><>::
+test stars 3.png::CompressedTexture2D::8914042483481122887::1740443048::1740443077::1::::<><>::
+test_stars.png::CompressedTexture2D::6595728084595348499::1740438646::1740438806::1::::<><>::
